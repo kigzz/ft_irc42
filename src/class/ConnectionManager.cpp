@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ConnectionManager.cpp                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bbrassar <bbrassar@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 10:54:39 by bbrassar          #+#    #+#             */
-/*   Updated: 2022/12/19 18:33:07 by bbrassar         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "class/ConnectionManager.hpp"
 #include "class/exception/IOException.hpp"
 

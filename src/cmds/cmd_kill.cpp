@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   cmd_kill.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bbrassar <bbrassar@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/23 03:00:42 by bbrassar          #+#    #+#             */
-/*   Updated: 2022/12/13 20:59:50 by bbrassar         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "command.h"
 #include "Client.hpp"
 #include "Channel.hpp"
@@ -41,7 +29,7 @@ void cmd_kill(CommandContext& ctx)
 		}
 		for (contentIt = contents.begin(); contentIt != contents.end(); ++contentIt)
 			(*contentIt)->send(prefix + " KILL :Killed: by " + client.nickname + reason);
-		ClientIt->second->send("ERROR :buh-bye loser");
+		ClientIt->second->send("ERROR :Cya bro!");
 		ClientIt->second->shouldClose = true;
 	}
 }

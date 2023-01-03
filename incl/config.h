@@ -1,7 +1,7 @@
 #ifndef CONFIG_H
 # define CONFIG_H
 
-# define SERVER_NAME "ft_ble"
+# define SERVER_NAME "FT IRC42"
 
 # define VERSION_MAJOR 1
 # define VERSION_MINOR 0

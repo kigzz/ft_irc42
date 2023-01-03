@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Reply.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bbrassar <bbrassar@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 18:04:40 by bbrassar          #+#    #+#             */
-/*   Updated: 2022/12/17 07:03:10 by bbrassar         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Reply.hpp"
 #include "Client.hpp"
 #include "config.h"
@@ -39,7 +27,7 @@ std::string const ReplyFactory<RPL_MYINFO>::NAME = "RPL_MYINFO";
 
 std::string ReplyFactory<RPL_MYINFO>::makeReply(std::string const& serverName)
 {
-	return ":" + serverName + " " VERSION " io iklo";
+	return ":" + serverName + " " VERSION;
 };
 
 std::string const ReplyFactory<RPL_UMODEIS>::NAME = "RPL_UMODEIS";

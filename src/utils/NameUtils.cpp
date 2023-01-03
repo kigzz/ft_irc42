@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   NameUtils.cpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lrandria <lrandria@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 01:55:43 by bbrassar          #+#    #+#             */
-/*   Updated: 2022/12/16 01:03:40 by lrandria         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "utils/NameUtils.hpp"
 
 static void __showClient(Client& sender, Channel::ClientList::iterator const& it, Channel& channel, bool isMember);
