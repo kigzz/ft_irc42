@@ -83,7 +83,7 @@ void Server::loadOperatorFile(std::string const& file)
 	in.open(file.c_str());
 	if (in)
 	{
-		this->logger.log(DEBUG, "Registering operators");
+		this->logger.log(DEBUG, "Registered operators");
 		while (std::getline(in, line))
 		{
 			ss << line;

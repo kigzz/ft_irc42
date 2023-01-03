@@ -1,3 +1,2 @@
-enora * password
-liana 127.0.0.1 gud_paswor
-ben localhost 79
+bpouchep * password
+dalitt 127.0.0.1 password2
