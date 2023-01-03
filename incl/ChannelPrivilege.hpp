@@ -1,0 +1,13 @@
+#ifndef CHANNELPRIVILEGE_HPP
+# define CHANNELPRIVILEGE_HPP
+
+enum ChannelPrivilege
+{
+	PRIV_NONE = 0,
+	PRIV_VOICE = 1,
+	PRIV_CHANOP = 2,
+	PRIV_UNIQOP = 3,
+	PRIV_DISABLED = 4,
+};
+
+#endif
