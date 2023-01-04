@@ -1,4 +1,4 @@
-pour devenir op => /oper enora password
+pour devenir op => /oper bpouchep password
 
 irssi => /connect localhost 6669 caca
 
