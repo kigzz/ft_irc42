@@ -63,10 +63,8 @@ class Channel : public Recipient {
 		void					setPriv(std::string const &nick, ChannelPrivilege privilege);
 		int						getClientPriv(Client &client);
 
-		// Recipient overloads
 		std::string const& 		getIdentifier() const;
 		void					sendMessage(Client& sender, std::string const& command, std::string const& message);
-		//
 };
 
 #endif

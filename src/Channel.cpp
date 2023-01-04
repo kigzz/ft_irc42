@@ -1,10 +1,6 @@
 #include "Channel.hpp"
 #include <iostream>
 
-/* ==========================================================================
-								COPLIEN AFORM
-   ========================================================================== */
-
 Channel::Channel(Server* server) : Recipient(server),
 	name(),
 	topic(),
@@ -63,18 +59,10 @@ Channel	&Channel::operator=(Channel const& rhs) {
 
 Channel::~Channel() {}
 
-/* ==========================================================================
-								MEMBER FUNCTIONS
-   ========================================================================== */
-
 bool Channel::empty() const
 {
 	return this->allClients.empty();
 }
-
-/* ==========================================================================
-								MEMBER FUNCTIONS
-   ========================================================================== */
 
 void Channel::addChanModes(std::string newModes) {
 
@@ -98,10 +86,6 @@ void Channel::removeChanModes(std::string byeModes) {
 		}
 	}
 }
-
-/* ==========================================================================
-								MEMBER FUNCTIONS
-   ========================================================================== */
 
 void	Channel::addClient(Client &client, ChannelPrivilege privilege) {
 	ClientPrivilege const entry = {&client, privilege};
@@ -139,10 +123,6 @@ Channel::ClientList::iterator Channel::getClient(Client& client)
 	return it;
 }
 
-/* ==========================================================================
-								MEMBER FUNCTIONS
-   ========================================================================== */
-
 void	Channel::inviteClient(Client& client) {
 
 	this->invitedClients.insert(&client);
@@ -157,10 +137,6 @@ void	Channel::uninviteClient(Client& client) {
 
 	this->invitedClients.erase(&client);
 }
-
-/* ==========================================================================
-								MEMBER FUNCTIONS
-   ========================================================================== */
 
 int		Channel::getClientPriv(Client &client) {
 
@@ -184,11 +160,6 @@ void	Channel::setPriv(std::string const &nick, ChannelPrivilege priv) {
 			break;
 		}
 }
-
-
-/* ==========================================================================
-					MEMBER FUNCTIONS -RECIPIENTS OVERLOADS-
-   ========================================================================== */
 
 std::string const& Channel::getIdentifier() const
 {

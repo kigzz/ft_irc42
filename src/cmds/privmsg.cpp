@@ -1,3 +1,4 @@
+#include <z3.h>
 #include "Client.hpp"
 #include "command.h"
 
@@ -22,6 +23,8 @@ void cmd_privmsg(CommandContext& ctx)
 		if (recipient == NULL)
 			client.reply<ERR_NOSUCHNICK>(*recipIt);
 		else
-			recipient->sendMessage(client, ctx.name, args[1]);
+		{
+				recipient->sendMessage(client, ctx.name, ctx.args[1]);
+		}
 	}
 }

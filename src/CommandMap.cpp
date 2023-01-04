@@ -8,7 +8,7 @@ CommandMap::CommandMap(Server& server) :
 	_commands(),
 	server(server)
 {
-	this->server.logger.log(DEBUG, "Registering commands");
+	this->server.logger.log(DEBUG, "Registered commands");
 	this->put("CAP", NULL);
 	this->put("PASS", cmd_pass);
 	this->put("USER", cmd_user);
@@ -52,7 +52,6 @@ void CommandMap::process(Client& client, std::string const& line)
 		return;
 	begin = line.begin();
 
-	// extract prefix if any
 	if (*begin == ':')
 	{
 		it = std::find(begin, line.end(), ' ');
@@ -62,14 +61,11 @@ void CommandMap::process(Client& client, std::string const& line)
 			++begin;
 	}
 
-	// extract command name
 	it = std::find(begin, line.end(), ' ');
 
-	// extract the rest of the line if any
 	if (it != line.end())
 		params = std::string(it + 1, line.end());
 
-	// execute the command with the given arguments
 	this->dispatch(client, prefix, std::string(begin, it), params);
 }
 

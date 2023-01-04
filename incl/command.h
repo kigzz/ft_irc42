@@ -19,15 +19,12 @@ struct CommandContext
 	CommandContext(Client& client, std::string const& name, std::string const& line);
 	~CommandContext();
 
-	// split arguments on spaces, with long strings
 	static ArgumentList split(std::string const& line);
-
-	// split arguments on comma, without long arguments
 	static ArgumentList splitList(std::string const& line);
 
 	private:
 	static ArgumentList __split(std::string const& line, char separator, bool colon);
-}; // struct CommandContext
+};
 
 typedef void (*CommandHandler)(CommandContext& ctx);
 
@@ -53,4 +50,4 @@ void cmd_list(CommandContext& ctx);
 void cmd_names(CommandContext& ctx);
 void cmd_invite(CommandContext& ctx);
 
-#endif // COMMAND_H
+#endif

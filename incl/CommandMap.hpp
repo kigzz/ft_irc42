@@ -32,6 +32,6 @@ public:
 
 public:
 	void handleUnknownCommand(Client& client, std::string const& name);
-}; // class CommandMap
+};
 
-#endif // COMMANDMAP_HPP
+#endif

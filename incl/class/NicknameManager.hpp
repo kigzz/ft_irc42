@@ -30,4 +30,4 @@ public:
 public:
 	iterator begin();
 	iterator end();
-}; // class NicknameManager
+};

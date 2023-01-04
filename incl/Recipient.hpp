@@ -17,6 +17,6 @@ public:
 public:
 	virtual std::string const& getIdentifier() const = 0;
 	virtual void sendMessage(Client& sender, std::string const& command, std::string const& message) = 0;
-}; // class Recipient
+};
 
-#endif // RECIPIENT_HPP
+#endif

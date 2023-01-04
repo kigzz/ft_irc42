@@ -42,7 +42,6 @@ long	parsing_input(int ac, char *str) {
 static void __handleSignal(int sig);
 static void __setupSignalHandlers();
 
-//./ircserv <port> <password>
 int	main(int ac, char **av) {
 
 	long port;
@@ -107,9 +106,9 @@ static void __setupSignalHandlers()
 
 static void __handleSignal(int sig)
 {
-	std::cout << "\b\b"; // remove ^C from terminal
+	std::cout << "\b\b";
 	__logger->log(INFO, "Press Ctrl+C again to force shutdown");
-	g_Mode = 0; // stop the server as soon as possible
-	std::signal(sig, SIG_DFL); // reset signal handler
+	g_Mode = 0;
+	std::signal(sig, SIG_DFL);
 	__logger->log(DEBUG, "Reset signal handler");
 }

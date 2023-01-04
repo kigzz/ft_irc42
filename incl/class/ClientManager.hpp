@@ -1,6 +1,5 @@
 #pragma once
 
-// #include "Client.hpp"
 #include <map>
 #include <string>
 
@@ -30,4 +29,4 @@ public:
 
 	iterator begin();
 	iterator end();
-}; // class ClientManager
+};

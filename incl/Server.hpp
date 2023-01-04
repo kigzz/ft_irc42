@@ -49,7 +49,6 @@ class Server {
 		std::string password;
 		OperatorPasswordList operatorPasswords;
 
-		// managers
 		CommandMap commandMap;
 		NicknameManager nickManager;
 		ClientManager clientManager;
@@ -58,23 +57,14 @@ class Server {
 
 	private:
 
-		/**
-		 * Kill all active connections
-		 */
 		void __shutdown();
 
-		/**
-		 * Wrapper function for C's strftime
-		 *
-		 * @note format: '%Y-%m-%d %H:%M:%S'
-		 * @return a string that contains the current date
-		 */
 		static std::string __getStartDate();
-}; // class Server
+};
 
 std::ostream& operator<<(std::ostream& os, sockaddr_in& address);
 std::string operator+(std::string const& str, int n);
 std::string operator+(std::string const& str, sockaddr_in& addr);
 std::string operator+(sockaddr_in& addr, std::string const& str);
 
-#endif // SERVER_HPP
+#endif

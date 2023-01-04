@@ -26,4 +26,4 @@ public:
 	void log(LogLevel level, std::string const& message);
 };
 
-#endif // LOGGER_HPP
+#endif

@@ -31,28 +31,19 @@ CommandContext::ArgumentList CommandContext::__split(std::string const& line, ch
 
 	while (it != line.end())
 	{
-		// if the first character is a colon
 		if (colon && *it == ':')
 		{
-			// skip the colon
 			++it;
-
-			// go to the end
 			fast = line.end();
 		}
 		else
 		{
-			// go to next space
 			fast = std::find(it, line.end(), separator);
 		}
 
-		// add a new argument
 		args.push_back(std::string(it, fast));
-
-		// move the iterator
 		it = fast;
 
-		// if not at the end, skip the current space
 		if (it != line.end())
 			++it;
 	}

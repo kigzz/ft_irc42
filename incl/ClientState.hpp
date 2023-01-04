@@ -9,6 +9,6 @@ enum ClientState
 	CLIENT_STATE_OPERATOR = 1 << 3,
 	CLIENT_STATE_LOGGED = (CLIENT_STATE_USER | CLIENT_STATE_NICK),
 	CLIENT_STATE_NICK_FAILED = 1 << 4,
-}; // enum ClientState
+};
 
-#endif // CLIENT_STATE_HPP
+#endif

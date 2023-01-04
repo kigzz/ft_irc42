@@ -11,10 +11,6 @@
 #include <sstream>
 #include <unistd.h>
 
-/* ==========================================================================
-								COPLIEN FORM
-   ========================================================================== */
-
 Client::Client(Server* server) : Recipient(server),
 	channels(),
 	username(),
@@ -73,10 +69,6 @@ Client		&Client::operator=(Client const &rhs) {
 	return (*this);
 }
 
-/* ==========================================================================
-								MEMBERS FUNCTIONS
-   ========================================================================== */
-
 bool Client::readFrom()
 {
 	int errnum;
@@ -94,7 +86,6 @@ bool Client::readFrom()
 
 	if (res == 0)
 	{
-		// connection has been closed by client
 		this->server->logger.log(DEBUG, "<" + address + "> Connection closed by client");
 		this->closeConnection();
 		return true;
@@ -128,12 +119,10 @@ void Client::flushWriteBuffer()
 void Client::send(std::string const& command) {
 	this->writeBuffer += command + "\r\n";
 	this->server->logger.log(DEBUG, "SEND <" + this->address + "> '" + command + "'");
-	// std::cout << std::setfill(' ') << RED " > OUTPUT" END " " WHITE "|" END " " YELLOW << std::left << std::setw(15) << this->address << END " " WHITE "|" END " " RED << command << END << "\r\n";
 }
 
 void Client::closeConnection() {
 	::close(this->sock_fd);
-	// std::cout << std::setfill(' ') << YELLOW " * CLOSED" END " " WHITE "|" END " " YELLOW << std::left << std::setw(15) << this->address << END " " WHITE "|" END << "\r\n";
 }
 
 void Client::tryLogin()

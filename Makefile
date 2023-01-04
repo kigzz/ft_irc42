@@ -2,9 +2,7 @@ NAME	=	ircserv
 
 CC		=	c++
 
-DEFINES += -D_GLIBCXX_DEBUG
-
-FLAGS	=	-Wall -Wextra -Werror -Iincl -g3 -MMD -MP -std=c++98 $(DEFINES)
+FLAGS	=	-Wall -Wextra -Werror -Iincl -g3 -MMD -MP -std=c++98
 
 # main
 SRC		= main.cpp
@@ -32,26 +30,26 @@ SRC		+= wildcard.cpp
 SRC		+= Logger.cpp
 
 # commands
-SRC		+= cmds/cmd_user.cpp
-SRC		+= cmds/cmd_nick.cpp
-SRC		+= cmds/cmd_pass.cpp
-SRC		+= cmds/cmd_quit.cpp
-SRC		+= cmds/cmd_part.cpp
-SRC		+= cmds/cmd_join.cpp
-SRC		+= cmds/cmd_motd.cpp
-SRC		+= cmds/cmd_oper.cpp
-SRC		+= cmds/cmd_die.cpp
-SRC		+= cmds/cmd_kill.cpp
-SRC		+= cmds/cmd_ping.cpp
-SRC		+= cmds/cmd_mode.cpp
-SRC		+= cmds/cmd_privmsg.cpp
-SRC		+= cmds/cmd_restart.cpp
-SRC		+= cmds/cmd_notice.cpp
-SRC		+= cmds/cmd_topic.cpp
-SRC		+= cmds/cmd_kick.cpp
-SRC		+= cmds/cmd_list.cpp
-SRC		+= cmds/cmd_names.cpp
-SRC		+= cmds/cmd_invite.cpp
+SRC		+= cmds/user.cpp
+SRC		+= cmds/nick.cpp
+SRC		+= cmds/pass.cpp
+SRC		+= cmds/quit.cpp
+SRC		+= cmds/part.cpp
+SRC		+= cmds/join.cpp
+SRC		+= cmds/motd.cpp
+SRC		+= cmds/oper.cpp
+SRC		+= cmds/die.cpp
+SRC		+= cmds/kill.cpp
+SRC		+= cmds/ping.cpp
+SRC		+= cmds/mode.cpp
+SRC		+= cmds/privmsg.cpp
+SRC		+= cmds/restart.cpp
+SRC		+= cmds/notice.cpp
+SRC		+= cmds/topic.cpp
+SRC		+= cmds/kick.cpp
+SRC		+= cmds/list.cpp
+SRC		+= cmds/names.cpp
+SRC		+= cmds/invite.cpp
 
 OBJ		:=	$(addprefix ./obj/,$(SRC:%.cpp=%.o))
 

@@ -14,4 +14,4 @@ public:
 
 public:
 	char const* what() const throw();
-}; // class IOException
+};

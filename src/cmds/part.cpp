@@ -39,15 +39,12 @@ void cmd_part(CommandContext& ctx)
 			client.reply<ERR_NOTONCHANNEL>(chanIt->name);
 		else
 		{
-			// send PART to all clients in the channel
 			for (clientIt = chanIt->allClients.begin(); clientIt != chanIt->allClients.end(); ++clientIt)
 				clientIt->client->send(prefix + " PART " + chanIt->name + " :" + *messagePtr);
 
-			// remove the client from the channel
 			chanIt->removeClient(client);
 			client.channels.erase(&*chanIt);
 
-			// remove the channel if there is no client left
 			if (chanIt->empty())
 				server.channelManager.removeChannel(chanIt);
 		}

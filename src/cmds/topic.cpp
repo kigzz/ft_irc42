@@ -10,7 +10,6 @@ void cmd_topic(CommandContext& ctx)
 	Client& client = ctx.client;
 	Server& server = ctx.server;
 
-	// not enough arguments
 	if (args.empty())
 	{
 		client.reply<ERR_NEEDMOREPARAMS>(ctx.name);
@@ -19,7 +18,6 @@ void cmd_topic(CommandContext& ctx)
 
 	ChannelManager::iterator chanIt = server.channelManager.getChannel(args[0]);
 
-	// channel with such name not found
 	if (chanIt == server.channelManager.end())
 	{
 		client.reply<ERR_NOSUCHCHANNEL>(args[0]);
@@ -28,7 +26,6 @@ void cmd_topic(CommandContext& ctx)
 
 	Channel::ClientList::iterator clientIt = chanIt->getClient(client);
 
-	// client is not on channel
 	if (clientIt == chanIt->allClients.end())
 	{
 		client.reply<ERR_NOTONCHANNEL>(chanIt->name);

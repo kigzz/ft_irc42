@@ -43,4 +43,4 @@ private:
 	void handlePollInClient(Server& server, iterator& it);
 
 	void __eraseSockets();
-}; // class ConnectionManager
+};

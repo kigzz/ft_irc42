@@ -4,18 +4,8 @@
 
 #include <cctype>
 
-/**
- * Check if a given nickname is valid
- *
- * @param nickname the nickname to check
- * @return true if nickname is valid, false otherwise
- */
 static bool __is_nickname_valid(std::string const& nickname);
 
-// valid nickname characters:
-// []\`_^{}|a-zZ-Z0-9-
-// first character must not be a digit
-// length range: 1-9
 void cmd_nick(CommandContext& ctx)
 {
 	Client& client = ctx.client;

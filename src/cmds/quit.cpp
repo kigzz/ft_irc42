@@ -29,7 +29,7 @@ void cmd_quit(CommandContext& ctx)
 	}
 	for (recipIt = recipients.begin(); recipIt != recipients.end(); ++recipIt)
 		(*recipIt)->send(prefix + " QUIT :Quit: " + reason);
-	client.send("ERROR :buh-bye ;D");
+	client.send("ERROR :See you next time!");
 	client.shouldClose = true;
 	client.hasQuit = true;
 }

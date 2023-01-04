@@ -120,8 +120,6 @@ void ConnectionManager::handlePollInClient(Server& server, iterator& it)
 
 		if (client.readFrom())
 		{
-			// recv returned <= 0
-
 			std::string const prefix = client.asPrefix();
 			Client::ChannelList::iterator chanIt;
 			Channel::ClientList::iterator chanMemberIt;

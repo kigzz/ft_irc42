@@ -7,7 +7,7 @@ void cmd_oper(CommandContext& ctx)
 {
 	Client& client = ctx.client;
 
-	if (client.checkState(CLIENT_STATE_OPERATOR)) // client is already operator
+	if (client.checkState(CLIENT_STATE_OPERATOR))
 		return;
 
 	Server& server = ctx.server;

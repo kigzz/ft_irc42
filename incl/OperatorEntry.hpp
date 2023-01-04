@@ -16,4 +16,4 @@ struct OperatorEntry
 	~OperatorEntry();
 };
 
-#endif // OPERATORENTRY_HPP
+#endif

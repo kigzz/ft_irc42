@@ -12,4 +12,4 @@
 
 # define VERSION "" STR(VERSION_MAJOR) "." STR(VERSION_MINOR) "." STR(VERSION_PATCH)
 
-#endif // CONFIG_H
+#endif

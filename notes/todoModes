@@ -1,4 +1,78 @@
-TESTS :
+TEST CONNECTIONS :
 
-- /invite prout #mychan => NOSUCHNICK if prout doesn't exist?
-- /invite prout #mychan => USERNOTINCHANNEL mais c'est pas bon.
+With netcat :
+    nc -C <ip> <port>
+    PASS <password>
+    USER <user> <mode> <unused> :<realName>
+    NICK <nickName>
+
+With irssi :
+    /connect <ip> <port> <password> <nickname>
+
+Todo test :
+    - Caps creating channel []
+    - Caps authenticate []
+    - Caps commands []
+
+________________________________________________________________________________________________________________________
+
+TODO TESTS COMMANDS :
+
+** Shutdown the server | DIE | /die **
+    DIE []
+
+** Invite specific user to channel (for ChannelOpe) | INVITE <channelName> <nick> | /invite <channelName> <nick> **
+** Only way to join channel if ChannelMode +i **
+    INVITE []
+
+** Join a channel. If channelNick doesn't exist, create the channel | JOIN #<channelNick> | /join <channelName>
+    JOIN []
+
+** Kick user from channel (for ChannelOpe) | KICK #<channelName> <nick> | /kick <channelName> <nick>
+    KICK []
+
+** Close client connection (for ServerOpe) | KILL <nick> <reason> | /kill <nick> <reason>
+    KILL []
+
+** Show all channels from server, how many people are in, topic | LIST | /list -yes **
+    LIST []
+
+** Show Message of the Day, must be send every client connection **
+    MOTD []
+
+** Show users' nick in channel if specified or all channels if not | NAMES #<channelName> | /names <channelName> **
+    NAMES []
+
+** Define nickname of users or change it if already defined | NICK <newNick> | /nick <newNick>
+    NICK []
+
+** Same as PRIVMSG, send a message to a channel/user colored | NOTICE #<channelName> <msg> | /notice #<channelName> <msg> **
+    NOTICE []
+
+** Become a Server Operator | OPER <adminLog> <adminPass> | /oper <adminLog> <adminPass> **
+    OPER []
+
+** Leave one or many channel | PART #<channelName1> #<channelName2> .. | /part <channelName1> <channelName2> .. **
+    PART []
+
+** Define a password for your nickname | PASS <password> | /pass <password> **
+    PASS []
+
+** Check if the client is still active. Must respond by pong or gonna be killed by server | PING <serverIp> | /ping <serverIp> **
+    PING []
+
+** Same as NOTICE **
+    PRIVMSG []
+
+** Quit the server | QUIT <msg> | /quit <msg> **
+    QUIT []
+
+** Restart the server (must be ServerOpe) | RESTART | /restart **
+    RESTART []
+
+** Change the topic of a channel (must be ChannelOpe) | TOPIC #<channelName> <newTopic> | /topic <channelName> <newTopic> **
+    TOPIC []
+
+** Must be send at beginning to authenticate to server | USER <user> <mode> <unused> :<realname> **
+** Example : USER guest 0 *:<guestRealName> **
+    USER []

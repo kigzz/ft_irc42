@@ -68,7 +68,7 @@ enum Reply
 	ERR_UMODEUNKNOWNFLAG = 501,
 	ERR_USERSDONTMATCH = 502,
 
-}; // enum Reply
+};
 
 class Client;
 
@@ -489,4 +489,4 @@ struct ReplyFactory<ERR_USERSDONTMATCH>
 	static std::string makeReply();
 };
 
-#endif // REPLY_H
+#endif
