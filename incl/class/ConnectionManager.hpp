@@ -1,6 +1,7 @@
 #pragma once
 
 #include <poll.h>
+#include <fcntl.h>
 #include <vector>
 
 class Client;

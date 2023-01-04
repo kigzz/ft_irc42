@@ -165,6 +165,7 @@ void ConnectionManager::handlePollInServer(Server& server, iterator& it)
 		.revents = 0,
 	};
 
+	fcntl(pfd.fd, F_SETFL, O_NONBLOCK);
 	if (pfd.fd == -1)
 	{
 		errnum = errno;
